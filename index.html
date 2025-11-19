@@ -14,56 +14,55 @@ body {
     color: #ffffff;
     background-image: url("https://raw.githubusercontent.com/planga2025-droid/PLAN-UPPA-2025/main/PANTALLAZO%20PARA%20REUNION%20NACIONAL.jpg");
     background-size: cover;
-    background-position: top;
-    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
-.header {
-    padding: 15px;
-    display: flex;
-    justify-content: center;
-    gap: 25px;
+.page-wrapper {
+    padding-top: 40px; 
 }
 
 .title {
     font-size: 22px;
     margin: 20px auto;
     width: 90%;
-    max-width: 600px;
+    max-width: 650px;
     background: rgba(0,0,0,0.55);
-    padding: 15px;
-    border-radius: 10px;
+    padding: 18px;
+    border-radius: 12px;
     color: #ffffff;
     font-weight: bold;
+    line-height: 1.4;
 }
 
 .menu {
-    width: 90%;
-    max-width: 450px;
+    width: 92%;
+    max-width: 500px;
     margin: auto;
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 22px;
 }
 
 .item {
-    background: rgba(255,255,255,0.88);
-    border-radius: 10px;
-    padding: 15px;
+    background: rgba(255,255,255,0.92);
+    border-radius: 14px;
+    padding: 16px;
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 18px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.25);
-    transition: 0.2s;
+    transition: 0.25s;
     text-decoration: none;
     color: #4a60a0;
     font-size: 20px;
     font-weight: bold;
 }
 
+/* Efecto hover */
 .item:hover {
     transform: scale(1.03);
-    background: rgba(255,255,255,0.95);
+    background: rgba(255,255,255,1);
 }
 
 .icon {
@@ -81,39 +80,44 @@ body {
 }
 
 @media (max-width: 768px) {
-    .title { font-size: 18px; }
-    .item { font-size: 18px; padding: 12px; }
-    .icon { width: 48px; height: 48px; }
+    .title { font-size: 18px; padding: 15px; }
+    .item { font-size: 18px; padding: 14px; }
+    .icon { width: 45px; height: 45px; }
 }
 </style>
 </head>
 
 <body>
+<div class="page-wrapper">
 
-<div class="title">
-“Reunión nacional de desempeño 2025 y programación 2026 de la Gerencia del Asegurado, con énfasis en intervenciones focalizadas en ámbitos priorizados”
-</div>
+    <div class="title">
+    “Reunión nacional de desempeño 2025 y programación 2026 de la Gerencia del Asegurado, con énfasis en intervenciones focalizadas en ámbitos priorizados”
+    </div>
 
-<div class="menu">
+   <div class="menu">
 
-<a class="item" href="https://docs.google.com/forms/d/e/1FAIpQLSdMMGge6g0n3dxDIEcjphWPQyumTHJqmsne83cC1X4XgBsJgg/viewform?usp=sharing&ouid=109188244496116119373">
+   <a class="item" href="https://docs.google.com/forms/d/e/1FAIpQLSdMMGge6g0n3dxDIEcjphWPQyumTHJqmsne83cC1X4XgBsJgg/viewform?usp=sharing&ouid=109188244496116119373">
     <img class="icon" src="https://raw.githubusercontent.com/planga2025-droid/PLAN-UPPA-2025/b92c5345536ffadec848a9688e4ac21fa8d2f076/1%20Icono%20Formulario.png">
     Formulario de Asistencia
-</a>
+   </a>
 
-<a class="item" href="https://docs.google.com/forms/d/e/1FAIpQLSdzIZ0ZbVemf14JZe4xwuxzABtFEwjeg3foRFISVs0KitjhpQ/viewform?usp=sharing&ouid=109188244496116119373">
+   <a class="item" href="https://docs.google.com/forms/d/e/1FAIpQLSdzIZ0ZbVemf14JZe4xwuxzABtFEwjeg3foRFISVs0KitjhpQ/viewform?usp=sharing&ouid=109188244496116119373">
     <img class="icon" src="https://raw.githubusercontent.com/planga2025-droid/PLAN-UPPA-2025/b92c5345536ffadec848a9688e4ac21fa8d2f076/2%20Icono%20Preguntas.png">
     Preguntas Frecuentes
-</a>
+   </a>
 
-<a class="item" href="https://drive.google.com/drive/folders/1-xHxKvsQifzkdtSLPjk1dIffa8gm9wap">
+   <a class="item" href="https://drive.google.com/drive/folders/1-xHxKvsQifzkdtSLPjk1dIffa8gm9wap">
     <img class="icon" src="https://raw.githubusercontent.com/planga2025-droid/PLAN-UPPA-2025/b92c5345536ffadec848a9688e4ac21fa8d2f076/3%20Icono%20Repositorio.png">
     Repositorio
-</a>
+   </a>
 
 </div>
 
+<div class="footer">
+        SIS, estamos para ti.
+    </div>
 
+</div>
 
 </body>
 </html>
