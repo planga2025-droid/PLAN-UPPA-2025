@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Panel de Opciones</title>
+<style>
+body {
+font-family: Arial, sans-serif;
+background: #f5f5f5;
+margin: 0;
+padding: 0;
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+}
+.container {
+text-align: center;
+}
+h1 {
+margin-bottom: 25px;
+color: #333;
+}
+.opciones {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+gap: 20px;
+max-width: 900px;
+margin: auto;
+}
+.card {
+background: white;
+padding: 25px;
+border-radius: 10px;
+box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+cursor: pointer;
+transition: transform 0.2s, box-shadow 0.2s;
+text-decoration: none;
+color: #333;
+font-size: 18px;
+font-weight: bold;
+}
+.card:hover {
+transform: scale(1.05);
+box-shadow: 0 6px 14px rgba(0,0,0,0.2);
+}
+</style>
+</head>
+<body>
+
+
+<div class="container">
+<h1>Panel de Navegación</h1>
+
+
+<div class="opciones">
+
+
+<a class="card" href="https://docs.google.com/forms/d/e/1FAIpQLSdMMGge6g0n3dxDIEcjphWPQyumTHJqmsne83cC1X4XgBsJgg/viewform" target="_blank">
+Formulario de Asistencia
+</a>
+
+
+<a class="card" href="https://docs.google.com/forms/d/e/1FAIpQLSdzIZ0ZbVemf14JZe4xwuxzABtFEwjeg3foRFISVs0KitjhpQ/viewform" target="_blank">
+Preguntas Frecuentes
+</a>
+
+
+<a class="card" href="https://drive.google.com/drive/folders/1-xHxKvsQifzkdtSLPjk1dIffa8gm9wap" target="_blank">
+Repositorio
+</a>
+
+
+</div>
+
+
+</div>
+
+
+</body>
+</html>
