@@ -18,7 +18,7 @@ body {
     background-attachment: fixed;
 
     /* ESTO ES LO QUE SOLUCIONA EL PROBLEMA */
-    padding-top: 100px;
+    padding-top: 300px;
 }
 
 .title {
@@ -78,7 +78,8 @@ body {
 
 @media (max-width: 768px) {
     body {
-        padding-top: 280px; /* Ajuste para celulares */
+        background-attachment: scroll !important; /* ← ESTO SOLUCIONA EL PROBLEMA */
+        padding-top: 160px !important; /* AJUSTA AQUÍ PARA MÓVIL */
     }
     .title { font-size: 19px; }
     .item { font-size: 18px; padding: 12px; }
