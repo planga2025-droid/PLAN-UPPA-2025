@@ -1,91 +1,151 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title> SIS — Reunión Nacional</title>
+
+<title>SIS — Taller Nacional 2026</title>
 
 <style>
+* {
+    box-sizing: border-box;
+}
+
+html {
+    min-height: 100%;
+}
+
 body {
     margin: 0;
     padding: 0;
-    font-family: Arial, Arial;
+    font-family: Arial, sans-serif;
     text-align: center;
     color: #ffffff;
-    background-image: url("https://raw.githubusercontent.com/planga2025-droid/PLAN-UPPA-2025/67951b743262e6478a7e5655ea45c407d81fc3ed/PANTALLAZO%20PARA%20REUNION%20NACIONAL%20(1).jpg");
-    background-size: cover;
-    background-position: top;
-    background-attachment: fixed;
 
-    /* ESTO ES LO QUE SOLUCIONA EL PROBLEMA */
-    padding-top: 200px;
+    /* Nueva imagen integrada */
+    background-image: url("https://raw.githubusercontent.com/planga2025-droid/PLAN-UPPA-2025/main/FONDO_TALLER_2026_1080x1920.jpg");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 100% auto;
+    background-color: #f8fbfd;
+    background-attachment: scroll;
+
+    min-height: 100vh;
 }
 
+/* Ya no se necesita una imagen superior independiente */
 .title {
-    margin-bottom: 25px;   /* 👈 ESTA ES LA LÍNEA QUE NECESITAS */
+    display: none;
 }
-/* 🔴🔴🔴 FIN DE LA PARTE A AGREGAR 🔴🔴🔴 */
 
 .banner {
-    width: 100%;
-    height: 70px;   /* AJUSTA AQUÍ: prueba 300, 350, 400... */
-    object-fit: cover; 
-    display: block;
-    margin: 0;
-    padding: 0;
-
+    display: none;
 }
+
+/* Menú de navegación */
 .menu {
     width: 90%;
     max-width: 450px;
-    margin: auto;
+    margin: 0 auto;
+
+    /* Espacio para los logotipos y el título integrados
+       en la nueva imagen */
+    padding-top: clamp(390px, 48vw, 570px);
+
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 20px;
 }
 
 .item {
-    background: rgba(255,255,255,0.88);
-    border-radius: 12px;
-    padding: 15px;
+    width: 100%;
+    min-height: 85px;
+
+    background: rgba(255, 255, 255, 0.92);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 16px;
+    padding: 14px;
+
     display: flex;
     align-items: center;
-    gap: 20px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
-    transition: 0.2s;
+    gap: 16px;
+
+    box-shadow: 0 4px 12px rgba(25, 65, 120, 0.15);
+    transition: transform 0.2s, background 0.2s;
+
     text-decoration: none;
-    color: #4a60a0;
-    font-size: 20px;
+    color: #244fa5;
+    font-size: 18px;
     font-weight: bold;
+    text-align: left;
 }
 
 .item:hover {
-    transform: scale(1.03);
-    background: rgba(255,255,255,0.95);
+    transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.98);
 }
 
 .icon {
-    width: 55px;
-    height: 55px;
+    width: 52px;
+    height: 52px;
+    object-fit: contain;
+    flex-shrink: 0;
 }
 
+/* Pie de página: el mensaje ya está integrado en la imagen */
 .footer {
-    margin-top: 50px;
-    background: #c0266b;
-    color: white;
-    padding: 14px;
-    text-align: center;
-    font-size: 18px;
+    display: none;
 }
 
+/* Ajustes para celulares */
 @media (max-width: 700px) {
     body {
-        background-attachment: scroll !important; /* ← ESTO SOLUCIONA EL PROBLEMA */
-        padding-top: 90px !important; /* AJUSTA AQUÍ PARA MÓVIL */
+        background-size: 100% auto;
+        background-position: center top;
+        background-attachment: scroll;
     }
-    .title { font-size: 19px; }
-    .item { font-size: 18px; padding: 12px; }
-    .icon { width: 48px; height: 48px; }
+
+    .menu {
+        width: 88%;
+        max-width: 450px;
+
+        /* Posición aproximada del espacio blanco
+           debajo del título de la imagen */
+        padding-top: 102vw;
+
+        gap: 14px;
+    }
+
+    .item {
+        min-height: 72px;
+        padding: 11px;
+        gap: 12px;
+        border-radius: 14px;
+        font-size: 16px;
+    }
+
+    .icon {
+        width: 45px;
+        height: 45px;
+    }
+}
+
+/* Pantallas muy pequeñas */
+@media (max-width: 360px) {
+    .menu {
+        width: 92%;
+    }
+
+    .item {
+        font-size: 14px;
+        gap: 9px;
+    }
+
+    .icon {
+        width: 40px;
+        height: 40px;
+    }
 }
 </style>
 </head>
@@ -93,36 +153,51 @@ body {
 <body>
 
 <div class="title">
-<img class="banner" src="https://raw.githubusercontent.com/planga2025-droid/PLAN-UPPA-2025/943153659bc5e05780a050e31340d3a4776537d7/FONDO%20ESTE%20SI%20AL%20FIN.jpg">
+    <img class="banner" src="" alt="">
 </div>
 
 <div class="menu">
 
-<a class="item" href="https://docs.google.com/forms/d/e/1FAIpQLSdMMGge6g0n3dxDIEcjphWPQyumTHJqmsne83cC1X4XgBsJgg/viewform?usp=sharing&ouid=109188244496116119373">
-    <img class="icon" src="https://raw.githubusercontent.com/planga2025-droid/PLAN-UPPA-2025/b92c5345536ffadec848a9688e4ac21fa8d2f076/1%20Icono%20Formulario.png">
-    Formulario de Asistencia (Ingreso)
-</a>
-    
-<a class="item" href="https://docs.google.com/forms/d/e/1FAIpQLSeMnNWKhpUcaaq18iAzJ4CSl9V5YiCS7lfkEi4olRi6K7l-2A/viewform?usp=sharing&ouid=109188244496116119373">
-    <img class="icon" src="https://raw.githubusercontent.com/planga2025-droid/PLAN-UPPA-2025/b92c5345536ffadec848a9688e4ac21fa8d2f076/1%20Icono%20Formulario.png">
-    Formulario de Asistencia (Salida)
-</a>
-    
-<a class="item" href="https://docs.google.com/forms/d/e/1FAIpQLSdzIZ0ZbVemf14JZe4xwuxzABtFEwjeg3foRFISVs0KitjhpQ/viewform?usp=sharing&ouid=109188244496116119373">
-    <img class="icon" src="https://raw.githubusercontent.com/planga2025-droid/PLAN-UPPA-2025/b92c5345536ffadec848a9688e4ac21fa8d2f076/2%20Icono%20Preguntas.png">
-    Preguntas Frecuentes
-</a>
+    <a class="item"
+       href="https://docs.google.com/forms/d/e/1FAIpQLSdMMGge6g0n3dxDIEcjphWPQyumTHJqmsne83cC1X4XgBsJgg/viewform?usp=sharing&amp;ouid=109188244496116119373">
+        <img class="icon"
+             src="https://raw.githubusercontent.com/planga2025-droid/PLAN-UPPA-2025/b92c5345536ffadec848a9688e4ac21fa8d2f076/1%20Icono%20Formulario.png"
+             alt="">
+        <span>Formulario de Asistencia (Ingreso)</span>
+    </a>
 
-<a class="item" href="https://drive.google.com/drive/folders/1-xHxKvsQifzkdtSLPjk1dIffa8gm9wap">
-    <img class="icon" src="https://raw.githubusercontent.com/planga2025-droid/PLAN-UPPA-2025/b92c5345536ffadec848a9688e4ac21fa8d2f076/3%20Icono%20Repositorio.png">
-    Repositorio
-</a>
+    <a class="item"
+       href="https://docs.google.com/forms/d/e/1FAIpQLSeMnNWKhpUcaaq18iAzJ4CSl9V5YiCS7lfkEi4olRi6K7l-2A/viewform?usp=sharing&amp;ouid=109188244496116119373">
+        <img class="icon"
+             src="https://raw.githubusercontent.com/planga2025-droid/PLAN-UPPA-2025/b92c5345536ffadec848a9688e4ac21fa8d2f076/1%20Icono%20Formulario.png"
+             alt="">
+        <span>Formulario de Asistencia (Salida)</span>
+    </a>
 
-<a class="item" href="https://www.google.com/maps/d/u/0/edit?mid=1-wV4SA8ydbiOAT0pZ8R-VhJnTmYC2pc&usp=sharing">
-    <img class="icon" src="https://raw.githubusercontent.com/planga2025-droid/PLAN-UPPA-2025/b92c5345536ffadec848a9688e4ac21fa8d2f076/3%20Icono%20Repositorio.png">
-    Lugares de Interés
+    <a class="item"
+       href="https://docs.google.com/forms/d/e/1FAIpQLSdzIZ0ZbVemf14JZe4xwuxzABtFEwjeg3foRFISVs0KitjhpQ/viewform?usp=sharing&amp;ouid=109188244496116119373">
+        <img class="icon"
+             src="https://raw.githubusercontent.com/planga2025-droid/PLAN-UPPA-2025/b92c5345536ffadec848a9688e4ac21fa8d2f076/2%20Icono%20Preguntas.png"
+             alt="">
+        <span>Preguntas Frecuentes</span>
+    </a>
 
-</a>
+    <a class="item"
+       href="https://drive.google.com/drive/folders/1-xHxKvsQifzkdtSLPjk1dIffa8gm9wap">
+        <img class="icon"
+             src="https://raw.githubusercontent.com/planga2025-droid/PLAN-UPPA-2025/b92c5345536ffadec848a9688e4ac21fa8d2f076/3%20Icono%20Repositorio.png"
+             alt="">
+        <span>Repositorio</span>
+    </a>
+
+    <a class="item"
+       href="https://www.google.com/maps/d/u/0/edit?mid=1-wV4SA8ydbiOAT0pZ8R-VhJnTmYC2pc&amp;usp=sharing">
+        <img class="icon"
+             src="https://raw.githubusercontent.com/planga2025-droid/PLAN-UPPA-2025/b92c5345536ffadec848a9688e4ac21fa8d2f076/3%20Icono%20Repositorio.png"
+             alt="">
+        <span>Lugares de Interés</span>
+    </a>
+
 </div>
 
 </body>
